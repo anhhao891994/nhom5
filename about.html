@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giới thiệu về cửa hàng MH</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 5px;
+            padding: 5px;
+            background-color: rgb(174, 243, 243);
+        }
+        .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+    </style>
+    <div>
+        <img id="slideshow" class="slideshow" src="hinh_anh/anh/anh_2.jfif" alt="Hình ảnh">
+        </div>
+   <div>
+    <h1>Cửa Hàng MH</h1>
+    Cửa hàng MH là điểm đến lý tưởng cho những ai yêu thích không gian xanh và mong muốn mang thiên nhiên vào cuộc sống. Chúng
+tôi chuyên cung cấp đa dạng các loại cây cảnh, từ cây để bàn nhỏ xinh, cây phong thủy mang lại may mắn, đến những loại cây
+trang trí sân vườn, giúp không gian sống thêm tươi mát và sinh động. Với đội ngũ nhân viên tận tâm và am hiểu về cây cảnh, chúng tôi luôn sẵn sàng tư vấn để khách hàng chọn được loại cây phù
+hợp với không gian và phong thủy. Không chỉ là nơi bán cây, chúng tôi còn mong muốn lan tỏa tình yêu thiên nhiên, giúp mọi
+người hiểu hơn về cách chăm sóc cây và tận hưởng những lợi ích mà cây xanh mang lại. Cửa hàng MH cam kết cung cấp cây khỏe mạnh, giá cả hợp lý và dịch vụ tận tình. Hãy ghé thăm chúng tôi để tìm cho mình những
+chậu cây ưng ý, mang đến không gian xanh mát và tràn đầy sức sống!
+   </div>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        const images = [
+            "hinh_anh/about/about_1.jpg",
+            "hinh_anh/about/about_2.jpg",
+            "hinh_anh/about/about_3.jpg",
+            "hinh_anh/about/about_4.jpg",
+            "hinh_anh/about/about_5.jpg",
+            "hinh_anh/anh/anh_4.jfif",
+            "hinh_anh/anh/anh_5.jfif",
+            "hinh_anh/anh/anh_6.jfif",
+            "hinh_anh/anh/anh_7.jfif",
+
+          ];
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+</body>
+</html>
