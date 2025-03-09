@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> NHÂN VIÊN</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: palegoldenrod;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/minh_2.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Trần Đặng Quốc Minh <br>
+    Sinh ngày: 04/11/2008<br>
+    Quê quán : Bình Dương <br>
+    Nơi công tác: Cửa Hàng MH <br>
+    Chức vụ: Nhân Viên<br>
+    </p>
+    <p>  Tôi hiện đang làm nhân viên tại cửa hàng MH, tôi niềm đam mê với thiên nhiên và cây cối. Mỗi ngày, tôi được tiếp 
+        xúc với những chậu cây xanh tươi, chăm sóc chúng như những người bạn, từ tưới nước, tỉa lá đến chọn chậu phù hợp.
+        Tôi cảm thấy hạnh phúc khi giúp khách hàng tìm được loại cây ưng ý, hướng dẫn họ cách chăm sóc để cây phát triển 
+        tốt. Nhìn thấy cây lớn lên khỏe mạnh và mang đến không gian xanh cho mọi người chính là động lực để tôi gắn bó 
+        lâu dài với công việc này.
+        <div>
+        <a href="index.html" class="back-btn">Trở lại trang chủ</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/minh_1.jpg",
+            "hinh_anh/thanhvien/minh_2.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 5000); // Thay đổi ảnh mỗi 5 giây
+    </script>
+</body>
+</html>
