@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng MH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <div id="welcomeMessage" style="display:none;">
+            <h1>Xin chào <span id="user"></span>!</h1>
+            <h3>Chào mừng đến với cửa hàng của chúng tôi</h3>
+        </div>
+        <img src="hinh_anh/logo 400.jpg" alt="logo">
+    </header>
+    <h1>cửa hàng MH</h1>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li class="dropdown">
+                <a href="#">Sản phẩm</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="showProducts('cây cảnh')">Cây Cảnh</a></li> 
+                    <li><a href="#" onclick="showProducts('hoa')">Hoa</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Giới thiệu</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="about.html">Về cửa hàng</a>
+                        
+                    </li>
+                    <li>
+                        <a href="team.html">Đội ngũ của cửa hàng</a>
+                        
+                    </li>               
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Tài khoản</a>
+                <ul class="submenu">
+            <li><a href="login.html">Đăng nhập</a></li>
+            <li><a id="logoutButton">Đăng xuất</a></li>
+            </li>
+            </ul>
+        </ul>
+        <div class="menu-icon">☰</div>
+    </nav>
+</div>
+<h2 id="category-title">Chọn danh mục để xem sản phẩm</h2>
+<div class="gallery" id="product-gallery">
+    <!-- Thư viện sản phẩm sẽ hiển thị ở đây -->
+</div>
+    <h2>DANH SÁCH THÀNH VIÊN CỦA CỬA HÀNG</h2>
+    <div class="slide-contenner">
+    <div class="slide" onclick="window.location.href='thanhvien_1.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/hao_1.jpg');">
+          
+        </div>
+        <div class="content">
+            <h2>ĐÀO NGUYỄN ANH HÀO</h2>
+            <p>CHỦ CỬA HÀNG.</p>
+        </div>
+    </div>
+    <div class="slide" onclick="window.location.href='thanhvien_2.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/minh_1.jpg');">
+        </div>
+        <div class="content">
+            <h2>TRẦN ĐẶNG QUỐC MINH</h2>
+            <p> NHÂN VIÊN.</p>
+        </div>
+    </div>
+    </div>
+    <img id="slideshow" class="slideshow" src="hinh_anh/team/team_5.jpg" alt="Hình ảnh">
+    <!-- Lightbox hiển thị ảnh lớn -->
+    <div id="lightbox" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img id="lightbox-img" src="">
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+    <script src="scripts.js"></script>
+
+
+</body>
+</html>
