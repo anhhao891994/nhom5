@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chủ cửa hàng</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: palegoldenrod;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/hao_2.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Đào Nguyễn Anh Hào <br>
+    Sinh ngày: 08/09/1994 <br>
+    Quê quán : Đồng Tháp <br>
+    Nơi làm việc: Cửa Hàng MH <br>
+    Chức vụ: Chủ cửa hàng <br>
+    </p>
+    <p> Từ bé tôi đã có sở thích trồng cây, sở thích trồng cây không chỉ là niềm vui đơn thuần mà còn là cách để tôi kết 
+        nối với thiên nhiên và tìm kiếm sự bình yên trong cuộc sống. Mỗi ngày, tôi dành thời gian chăm sóc từng chậu cây, 
+        tỉa lá, tưới nước và quan sát sự phát triển của chúng. Nhìn thấy một mầm non nhú lên hay một bông hoa nở rộ mang 
+        lại cho tôi cảm giác hạnh phúc và thành tựu. Không chỉ đơn thuần là trang trí, việc trồng cây còn giúp tôi thư 
+        giãn rất nhiều, giảm căng thẳng và tạo ra một không gian xanh mát, trong lành. Với tôi, mỗi loài cây đều có một 
+        câu chuyện riêng, và việc chăm sóc cây giống như vun đắp niềm vui, sự kiên nhẫn và tình yêu dành cho cuộc sống.</p>
+    <div>
+        <a href="index.html" class="back-btn">Trở lại trang chủ</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/hao_1.jpg",
+            "hinh_anh/thanhvien/hao_2.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 5000); // Thay đổi ảnh mỗi 5 giây
+    </script>
+</body>
+</html>
