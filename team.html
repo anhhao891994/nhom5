@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>đội ngũ cửa hàng MH</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 5px;
+            padding: 5px;
+            background-color: rgb(174, 243, 243);
+        }
+        .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+    </style>
+    <div>
+        <img id="slideshow" class="slideshow" src="hinh_anh/anh/anh_3.jfif" alt="Hình ảnh">
+        </div>
+   <div>
+    <h1>Đội ngũ cửa hàng MH</h1>
+    <p>Đội ngũ nhân viên tại MH không chỉ đơn thuần là những người bán hàng mà còn là những người yêu cây, đam mê thiên nhiên và luôn sẵn sàng chia sẻ kiến thức về cây cảnh với khách hàng. Mỗi thành viên trong cửa hàng đều có hiểu biết sâu sắc về các loại cây, cách chăm sóc, cũng như ý nghĩa phong thủy của từng loại. Nhờ đó, chúng tôi có thể tư vấn giúp khách hàng lựa chọn cây phù hợp với không gian, phong cách sống và mong muốn của mình.</p>
+        
+    <p>Bên cạnh sự am hiểu về cây cảnh, đội ngũ nhân viên chúng tôi luôn làm việc với tinh thần trách nhiệm, nhiệt tình và chu đáo. Chúng tôi không chỉ giúp khách hàng tìm được cây ưng ý mà còn hướng dẫn chi tiết cách chăm sóc, đảm bảo cây phát triển khỏe mạnh lâu dài. Với thái độ thân thiện và tận tâm, chúng tôi mong muốn mang đến trải nghiệm mua sắm thoải mái và hài lòng nhất cho khách hàng.</p>
+        
+    <p>Tại MH, chúng tôi không ngừng học hỏi và cập nhật kiến thức mới để nâng cao chất lượng dịch vụ. Sự hài lòng của khách hàng chính là động lực để chúng tôi tiếp tục phát triển, lan tỏa tình yêu cây cảnh và góp phần mang đến không gian sống xanh hơn cho mọi người.</p>
+    </div>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+         const images = [
+            "hinh_anh/team/team_1.jpg",
+            "hinh_anh/team/team_2.jpg",
+            "hinh_anh/team/team_3.jpg",
+            "hinh_anh/team/team_4.jpg",
+            "hinh_anh/team/team_5.jpg",
+            "hinh_anh/about/about_1.jpg",
+            "hinh_anh/about/about_2.jpg",
+            "hinh_anh/about/about_3.jpg",
+            "hinh_anh/about/about_4.jpg",
+            "hinh_anh/about/about_5.jpg",
+            "hinh_anh/anh/anh_1.jfif",
+            "hinh_anh/anh/anh_2.jfif",
+            "hinh_anh/anh/anh_3.jfif",
+            "hinh_anh/anh/anh_4.jfif",
+          ];
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+        setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+</body>
+</html>
